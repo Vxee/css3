@@ -1,0 +1,102 @@
+.container {
+    width: 100%;
+    position: relative;
+}
+
+span:hover {
+    background-position: 0 bottom;
+}
+
+.graph {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+.heartShaped {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: rgba(255, 20, 147);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+.heartShaped:before,
+.heartShaped:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(255, 20, 147);
+    z-index: -1;
+}
+
+.heartShaped:after {
+    top: -20px;
+    left: 0;
+}
+
+.bubble {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(0, 140, 255);
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border: 10px solid transparent;
+    border-top-color: rgb(0, 140, 255);
+    border-bottom: 0;
+    border-left: 0;
+    width: 0;
+    margin: 0 0 -10px -5px;
+}
+
+.notching {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70px;
+    height: 40px;
+    transform: translate(-50%,-50%);
+    background: 
+    linear-gradient(135deg, transparent 7px, deeppink 0) top left,
+    linear-gradient(-135deg, transparent 7px, deeppink 0) top right,
+    linear-gradient(-45deg, transparent 7px, deeppink 0) bottom right,
+    linear-gradient(45deg, transparent 7px, deeppink 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.arc {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 40px;
+    background:
+    radial-gradient(circle at top left,transparent 7px, yellowgreen 0) top left,
+    radial-gradient(circle at top right,transparent 7px, yellowgreen 0) top right,
+    radial-gradient(circle at bottom right,transparent 7px, yellowgreen 0) bottom right,
+    radial-gradient(circle at bottom left,transparent 7px, yellowgreen 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
