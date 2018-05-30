@@ -134,3 +134,70 @@ span:hover {
     z-index:-1;
 
 }
+
+.dingwei {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 80px;
+}
+.dingwei:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: '';
+    height: 15px;
+    width: 15px;
+    border: 7px solid #11ec98;
+    z-index: 1;
+    background: #fff;
+    border-radius: 20px;
+    margin: -10px 0 0 0;
+}
+.dingwei:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: '';
+    height: 0px;
+    width: 0px;
+    border: 20px solid transparent;
+    border-top-color: #11ec98;
+    border-width: 20px 13px 0px 13px;
+    margin: 8px 0 0 0; 
+}
+
+.addFile {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border: 1px dashed;
+    color: #ec771c;
+    transition: color .25s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.addFile:hover {
+    color: #34538b;
+}
+.addFile:before, .addFile:after {
+    content: '';
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+.addFile:before {
+    width: 20px;
+    border-top: 4px solid;
+    margin: -2px 0 0 -10px;
+}
+.addFile:after {
+    height: 20px;
+    border-left: 4px solid;
+    margin: -10px 0 0 -2px;
+}
